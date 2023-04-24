@@ -132,10 +132,8 @@ body {
 .naw-link.current {
   color: var(--ocean);
 }
-.naw-link.current::after,
-.naw-link:hover::after,
-.naw-link:focus::after {
-  background-color: var(--ocean);
+.naw-link.current::after {
+  background-color: var(--color-ocean);
 }
 .address {
   font-style: normal;
@@ -229,7 +227,7 @@ body {
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
-  transition: opacity 200ms ease, visibility 200ms ease;
+  transition: opacity var(--anim-slow), visibility var(--anim-slow);
 }
 
 .backdrop.is-hidden {
@@ -564,7 +562,7 @@ body {
   border: 1px solid var(--color-cornflower);
   border-radius: 4px;
   padding: 12px 24px;
-  transition: background-color var(--anim), color var(--anim);
+  transition: background-color var(--anim), color var(--anim), border var(--anim), box-shadow var(--anim);
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
@@ -606,9 +604,11 @@ body {
   color: var(--cloud);
   background-color: var(--iris);
 }
-.cards:hover .cards-text {
+.cards-link:hover .cards-text,
+.cards-link:focus .cards-text{
   transform: translate(0, 0);
 }
+
 .portfolio-pict {
   display: block;
 }
