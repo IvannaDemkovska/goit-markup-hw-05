@@ -17,6 +17,7 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+  
   <body>
     <!-- Header section -->
     <header class="header-border">
@@ -61,6 +62,17 @@
           <button type="button" class="hero-btn">Order Service</button>
         </div>
       </section>
+      
+      <!-- modal window -->
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="close-btn" data-modal-close>
+            <svg class="close-svg" width="8" height="8">
+              <use href="./images/icon.svg#icon-close-black"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
 
       <!-- first section -->
       <section class="first-conteiner">
@@ -464,7 +476,7 @@
     <!-- Footer section -->
     <footer class="footer">
       <div class="footer-cont container">
-        <div class="ft-text-wraper">
+        <div class="container-logo">
           <a href="./index.html" class="ft-logo foot-logo link"
             >Web<span class="footer-logo link">Studio</span></a
           >
@@ -519,7 +531,8 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="linkedin icon"
-                ><svg class="icon" width="24" height="24">
+                >
+                <svg class="icon" width="24" height="24">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
               </a>
@@ -528,6 +541,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
->>>>>>> c16ab041979f63f2a654863ea8efd6d99095648c
 </html>
