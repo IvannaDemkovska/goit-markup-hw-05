@@ -289,7 +289,7 @@ body {
   color: var(--color-white);
 }
 
-.close-icon {
+.close-svg {
   fill: currentColor;
 }
 
