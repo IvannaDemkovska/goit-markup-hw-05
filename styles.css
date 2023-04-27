@@ -438,6 +438,9 @@ body {
 .foot-social-media-link:focus {
   background-color: var(--color-green);
 }
+.ft-text-wraper {
+  margin-right: 120px;
+}
 /**
   |============================
   | Portfolio
