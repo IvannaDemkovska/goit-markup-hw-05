@@ -30,16 +30,23 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-ul {
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
+}
+button {
+  cursor: pointer;
 }
 /*#endregion reset*/
 body {
@@ -51,9 +58,14 @@ body {
 }
 .link {
   text-decoration: none;
+  transition: color var(--anim-fast), var(--time-func);
 }
 .list {
   list-style: none;
+}
+.link:hover,
+.link:focus {
+  transition: color var(--anim-fast), var(--time-func);
 }
 /**
   |============================
@@ -78,7 +90,14 @@ body {
 }
 .naw {
   display: flex;
-  align-items: center;
+  align-items: baseline;
+}
+.naw-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.contacts-item:not(:last-child) {
+  margin-right: 40px;
 }
 .naw-list {
   display: flex;
@@ -111,6 +130,19 @@ body {
   padding: 24px 0;
 
   transition: color var(--anim-fast) var(--time-func);
+}
+.naw-link.current::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-top: 20px;
+  border-radius: 2px;
+  background-color: var(--color-ocean);
+}
+
+.naw-link.current {
+  color: var(--color-ocean);
 }
 .naw-link:hover,
 .naw-link:focus {
@@ -386,7 +418,6 @@ body {
 }
 .footer-cont {
   display: flex;
-  gap: 120px;
   align-items: baseline;
 }
 .footer-title {
@@ -485,12 +516,10 @@ body {
     color var(--anim-fast) var(--time-func),
     box-shadow var(--anim-fast) var(--time-func);
     border: var(--anim-fast) var(--time-func);
-    transition-timing-function: var(--time-func);
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   background: var(--color-ocean);
-  border: 1px solid var(--color-ocean);
   color: var(--color-white);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -589,12 +618,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 0;
-  top: 0;
+  right: 24px;
+  top: 24px;
   width: 24px;
   height: 24px;
-  margin-right: 24px;
-  margin-top: 24px;
   background: #e7e9fc;
   border-radius: 50%;
   color: var(--color-grey);
