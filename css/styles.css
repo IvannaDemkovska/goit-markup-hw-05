@@ -141,7 +141,7 @@ body {
   background-color: var(--color-ocean);
 }
 
-.naw-link.current {
+.naw-link {
   color: var(--color-ocean);
 }
 .naw-link:hover,
