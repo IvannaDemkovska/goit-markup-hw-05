@@ -163,9 +163,9 @@ body {
   color: var(--color-ocean);
 }
 .naw-link.current::after,
-.naw-link:hover::after,
-.naw-link:focus::after {
-  background-color: var(--color-ocean);
+.naw-link.current:hover::after,
+.naw-link.current:focus::after {
+  background-color: darkviolet;
 }
 .address {
   font-style: normal;
